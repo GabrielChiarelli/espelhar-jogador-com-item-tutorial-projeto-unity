@@ -1,0 +1,4 @@
+Sprites:
+
+Dungeon Tileset 2 [ 0x72 ] - https://0x72.itch.io/dungeontileset-ii
+CC0 1.0 Universal
