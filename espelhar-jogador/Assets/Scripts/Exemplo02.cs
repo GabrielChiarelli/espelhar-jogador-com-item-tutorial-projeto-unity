@@ -19,6 +19,7 @@ public class Exemplo02 : MonoBehaviour
     private void Update()
     {
         ReceberInputs();
+        EspelharJogador();
     }
 
     private void ReceberInputs()
@@ -34,5 +35,17 @@ public class Exemplo02 : MonoBehaviour
     private void MovimentarJogador()
     {
         oRigidbody2D.velocity = new Vector2(inputHorizontal * velocidadeDeMovimento, oRigidbody2D.velocity.y);
+    }
+
+    private void EspelharJogador()
+    {
+        if (inputHorizontal > 0)
+        {
+            transform.localScale = new Vector3(1f, 1f, 1f);
+        }
+        else if (inputHorizontal < 0)
+        {
+            transform.localScale = new Vector3(-1f, 1f, 1f);
+        }
     }
 }

@@ -238,6 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bc9b926166d9a64f975af65dcb31b02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oSpriteRenderer: {fileID: 1997163765}
   velocidadeDeMovimento: 8
 --- !u!1 &489852676
 GameObject:

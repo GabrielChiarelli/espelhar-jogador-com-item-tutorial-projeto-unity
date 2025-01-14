@@ -5,6 +5,7 @@ using UnityEngine;
 public class Exemplo01 : MonoBehaviour
 {
     [Header("Referências Gerais")]
+    [SerializeField] private SpriteRenderer oSpriteRenderer;
     private Rigidbody2D oRigidbody2D;
 
     [Header("Movimentação")]
@@ -19,6 +20,7 @@ public class Exemplo01 : MonoBehaviour
     private void Update()
     {
         ReceberInputs();
+        EspelharJogador();
     }
 
     private void ReceberInputs()
@@ -34,5 +36,17 @@ public class Exemplo01 : MonoBehaviour
     private void MovimentarJogador()
     {
         oRigidbody2D.velocity = new Vector2(inputHorizontal * velocidadeDeMovimento, oRigidbody2D.velocity.y);
+    }
+
+    private void EspelharJogador()
+    {
+        if (inputHorizontal > 0)
+        {
+            oSpriteRenderer.flipX = false;
+        }
+        else if (inputHorizontal < 0)
+        {
+            oSpriteRenderer.flipX = true;
+        }
     }
 }
